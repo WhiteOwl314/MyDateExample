@@ -1,6 +1,7 @@
 package mydate;
 
-public class Date {
+public  class Date {
+
     //변수 선언
     private int year;
     private int month;
