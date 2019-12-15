@@ -17,16 +17,22 @@ public class Date {
                 case 1 : case 3 : case 5: case 7: case 8 : case 10 : case 12 :
                     if(day < 32 && day>0){
                         this.day = day;
+                    } else{
+                        System.out.println("올바른 날짜를 입력해주세요.");
                     }
                     break;
                 case 2 :
                     if(day < 29 && day>0){
                         this.day = day;
+                    } else {
+                        System.out.println("올바른 날짜를 입력해주세요.");
                     }
                     break;
                 case 4: case 6: case 9:
                     if(day < 31 && day>0){
                         this.day = day;
+                    } else {
+                        System.out.println("올바른 날짜를 입력해주세요.");
                     }
                     break;
             }
