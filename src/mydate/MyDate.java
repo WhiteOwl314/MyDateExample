@@ -1,11 +1,11 @@
 package mydate;
 
 public class MyDate extends Date implements HandlingDate {
-    public String getDate() {
+    public int getDate() {
         if (getYear() != 0 && getMonth() != 0 && getDay() != 0) {
-            return (getYear() + "년 " + getMonth() + "월 " + getDay() + "일");
+            return (getYear()*10000 + getMonth()*100 + getDay());
         } else{
-            return "ERROR";
+            return 0;
         }
     }
     @Override
@@ -26,7 +26,7 @@ public class MyDate extends Date implements HandlingDate {
     public boolean equals(Object obj) {
         MyDate objDown = (MyDate) obj;
         MyDate thisDown = (MyDate) this;
-        if(getDate() != "ERROR") {
+        if(getDate() != 0 ) {
             if(this.getDate() == ((MyDate) obj).getDate()){
                 return true;
             } else {
